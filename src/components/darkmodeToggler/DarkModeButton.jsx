@@ -1,8 +1,10 @@
 "use client";
 
+import useTheme from "@/hooks/useTheme";
 import React from "react";
-import { IoSunnyOutline, IoSunnySharp } from "react-icons/io5";
-const DarkModeButton = ({ theme, toggleTheme }) => {
+// import { IoSunnyOutline, IoSunnySharp } from "react-icons/io5";
+const DarkModeButton = () => {
+  const { theme, toggleTheme } = useTheme();
   return (
     <div>
       <label className="swap swap-rotate lg:ml-2">
