@@ -25,7 +25,7 @@ const TopBar = () => {
         <div className="ml-auto flex gap-1 md:mr-4">
           <DarkModeButton></DarkModeButton>
         </div>
-        <div className="relative flex w-full gap-2 md:w-max">
+        {/* <div className="relative flex w-full gap-2 md:w-max">
           <Input
             type="search"
             label="Type here..."
@@ -40,7 +40,7 @@ const TopBar = () => {
           >
             Search
           </Button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

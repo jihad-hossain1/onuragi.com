@@ -25,7 +25,30 @@ module.exports = withMT({
     fontFamily: {
       roboto: "var(--font-roboto)",
     },
+    colors: {
+
+      "main": "#f50",
+
+      "secondary": "#f2b14f",
+
+      "accent": "#1b5677",
+
+      "neutral": "#211523",
+
+      "base-100": "#34393d",
+
+      "info": "#92b9dd",
+
+      "success": "#18c98e",
+
+      "warning": "#dd8108",
+
+      "error": "#f4627c",
+    }
+
   },
+
   darkMode: ["class", '[data-theme="dark"]'],
   plugins: [require("daisyui")],
 });
+

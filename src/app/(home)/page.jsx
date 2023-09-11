@@ -1,7 +1,15 @@
-import React from "react";
+// "use client";
+import HomeCarosel from "@/components/carosel/HomeCarosel";
+import Container2 from "@/components/container/Container2";
+import Categories from "./Categories";
 
 const HomePage = () => {
-  return <div>this are the home page....</div>;
+  return (
+    <>
+      <Categories></Categories>
+      {/* <HomeCarosel></HomeCarosel> */}
+    </>
+  );
 };
 
 export default HomePage;
