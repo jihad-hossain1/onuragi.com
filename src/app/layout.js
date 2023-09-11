@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
             <div className='flex min-h-screen flex-col justify-between'>
               <div>
                 <Navbar></Navbar>
-                <main>
+                <main className='mt-10 md:mt-0'>
                   {children}
                 </main>
               </div>

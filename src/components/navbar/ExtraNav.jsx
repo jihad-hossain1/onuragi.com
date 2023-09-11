@@ -9,10 +9,10 @@ import {
 import { IoHeartOutline, IoHeartSharp } from "react-icons/io5";
 import { Tooltip } from "antd";
 
-const ExtraNav = () => {
+const ExtraNav = ({ toggle, settoggle }) => {
   return (
     <nav>
-      <ul className="flex flex-row-reverse space-x-3">
+      <ul className="  flex md:flex-row-reverse md:space-x-3  flex-col justify-center items-center ">
         <li>
           <Tooltip placement="bottom" color="#f50" title={"Bag"}>
             <CiBag1 className="text-3xl hover:text-main cursor-pointer "></CiBag1>

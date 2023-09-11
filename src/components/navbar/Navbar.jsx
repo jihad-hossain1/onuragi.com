@@ -1,21 +1,20 @@
 "use client";
-import useTheme from "@/hooks/useTheme";
+// import useTheme from "@/hooks/useTheme";
 import Link from "next/link";
-import React from "react";
+import { useState } from "react";
 import DarkModeButton from "../darkmodeToggler/DarkModeButton";
-import { StickyNavbar } from "./StickyNavbar";
-import TopBar from "./TopBar";
+// import { StickyNavbar } from "./StickyNavbar";
+// import TopBar from "./TopBar";
 import ExtraNav from "./ExtraNav";
 import Container2 from "../container/Container2";
 // import Categories from "@/app/(home)/Categories";
 
 const Navbar = () => {
-  const { theme, toggleTheme } = useTheme();
+  // const { theme, toggleTheme } = useTheme();
+  const [toggle, settoggle] = useState(false);
   return (
     <Container2>
-      {/* <StickyNavbar theme={theme} toggleTheme={toggleTheme}></StickyNavbar> */}
-      {/* <TopBar></TopBar> */}
-      <div className="flex justify-between items-center">
+      <div className="hidden md:flex justify-between items-center">
         <DarkModeButton></DarkModeButton>
         {/* <Categories></Categories> */}
         <ul className="flex space-x-3 md:text-[16px]">
@@ -46,28 +45,15 @@ const Navbar = () => {
         </ul>
         <ExtraNav></ExtraNav>
       </div>
-      {/* <nav className="mt-2 mb-4 dark:text-slate-100">
-        <ul className="flex items-center  space-x-3">
-          <Link href="/">
-            <li className="px-4 rounded border border-neutral-200 hover:shadow shadow-sm focus:border-neutral-400 dark:border-neutral-focus">
-              Home
-            </li>
-          </Link>
-
-          <Link href="/products">
-            <li className="px-4 rounded border border-neutral-200 hover:shadow shadow-sm focus:border-neutral-400 dark:border-neutral-focus">
-              product
-            </li>
-          </Link>
-
-          <Link href="/about">
-            <li className="px-4 rounded border border-neutral-200 hover:shadow shadow-sm focus:border-neutral-400 dark:border-neutral-focus">
-              about
-            </li>
-          </Link>
-          
-        </ul>
-      </nav> */}
+      <div className="md:hidden fixed">
+        <button
+          onClick={() => settoggle(!toggle)}
+          className="border border-main bg-main  hover:bg-opacity-50 rounded hover:rounded-lg shadow hover:shadow-lg transition ease-in-out duration-300 "
+        >
+          ToggleMe
+        </button>
+        {toggle && <ExtraNav settoggle={settoggle} toggle={toggle}></ExtraNav>}
+      </div>
     </Container2>
   );
 };

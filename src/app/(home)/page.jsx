@@ -5,10 +5,10 @@ import Categories from "./Categories";
 
 const HomePage = () => {
   return (
-    <>
-      <Categories></Categories>
+    <div className="">
+      {/* <Categories></Categories> */}
       {/* <HomeCarosel></HomeCarosel> */}
-    </>
+    </div>
   );
 };
 
