@@ -29,10 +29,10 @@ const DashboardLayout = ({ children }) => {
             </li>
             <li>
               <Link
-                href={"/dashboard/additem"}
+                href={"/"}
                 className="relative after:bg-orange-900 after:absolute after:h-0.5 after:w-0 after:bottom-0  after:left-0  hover:after:w-full after:transition-all after:duration-500 "
               >
-                Add Product
+                Back Home
               </Link>
             </li>
           </ul>

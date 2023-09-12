@@ -17,10 +17,10 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Provider>
           <Container>
-            <div className='flex min-h-screen flex-col justify-between'>
+            <div className='flex min-h-screen flex-col justify-between '>
               <div>
                 <Navbar></Navbar>
-                <main className='mt-10 md:mt-0'>
+                <main className='mt-10 md:mt-0 p-4'>
                   {children}
                 </main>
               </div>
