@@ -1,10 +1,10 @@
-import 'server-only'
 import { ObjectId } from "mongodb";
-import DatabaseConnect from "./database";
-
+import "server-only";
+import DbConnect from "./DbConnect";
+// import DbConnect from "./DbConnect";
 
 export const getProductsFromDb = async (categoryId) => {
-    const db = await DatabaseConnect()
+    const db = await DbConnect();
     const productsCollection = db.collection("products");
     const query = {};
     if (categoryId) {
@@ -14,7 +14,7 @@ export const getProductsFromDb = async (categoryId) => {
 };
 
 export const getProductByIdFromDb = async (id) => {
-    const db = await DatabaseConnect()
+    const db = await DbConnect();
     const productsCollection = db.collection("products");
     const query = {
         _id: new ObjectId(id),
@@ -22,9 +22,8 @@ export const getProductByIdFromDb = async (id) => {
     return productsCollection.findOne(query);
 };
 
-
 export const getProductsByIdsFromDb = async (ids = []) => {
-    const db = await DatabaseConnect()
+    const db = await DbConnect();
     const productsCollection = db.collection("products");
     const idsWithObjectId = ids.map((id) => new ObjectId(id));
     const query = {

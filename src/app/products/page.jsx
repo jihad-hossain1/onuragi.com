@@ -1,21 +1,16 @@
-import { getProducts } from "@/utils/getProducts";
 import React from "react";
-import SingleProduct from "./SingleProduct";
-import Container2 from "@/components/container/Container2";
+// import Products from "./Products";
+import { getProducts } from "@/utils/getProducts";
 
-const Products = async ({ searchParams: { categoryId } }) => {
+const ProductsPage = async ({ searchParams: { categoryId } }) => {
   const products = await getProducts(categoryId);
+  console.log(products);
   return (
-    <Container2>
-      <div className="mt-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 px-2">
-          {products.map((product) => (
-            <SingleProduct key={product._id} product={product}></SingleProduct>
-          ))}
-        </div>
-      </div>
-    </Container2>
+    <div>
+      <h2>All Products</h2>
+      <div>{/* <Products></Products> */}</div>
+    </div>
   );
 };
 
-export default Products;
+export default ProductsPage;

@@ -1,7 +1,9 @@
-import 'server-only';
-import { getProductsFromDb } from "@/dataServices/product.service";
+import "server-only";
+import { cache } from "react";
+import { getProductsFromDb } from "@/dataServices/products.services";
 
-import { cache } from 'react';
 
 
-export const getProducts = cache(getProductsFromDb) 
+
+export const getProducts = cache(getProductsFromDb)
+
